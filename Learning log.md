@@ -17,3 +17,4 @@ Stack Overflow地址：https://stackoverflow.com/questions/47880626/django-manag
 良心建议，仔细看教程。。。不要跳来跳去。。。
 不然属于自己挖坑自己填。。。
 ### 数据库配置
+今日未进行。
