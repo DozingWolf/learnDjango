@@ -74,12 +74,12 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 #model of Oracle
 # DATABASE_ENGINE = 'oracle'
@@ -89,16 +89,16 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # DATABASE_HOST = 'localhost'
 # DATABASE_PORT = '1521'
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.oracle',
-        'NAME': '',
-        'USER':'',
-        'PASSWORD':'',
-        'HOST':'',
-        'PORT':'',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.oracle',
+#         'NAME': '',
+#         'USER':'',
+#         'PASSWORD':'',
+#         'HOST':'',
+#         'PORT':'',
+#     }
+# }
 
 
 # Password validation
@@ -123,9 +123,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-Hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'UTC+8'
 
 USE_I18N = True
 
