@@ -81,6 +81,25 @@ DATABASES = {
     }
 }
 
+#model of Oracle
+# DATABASE_ENGINE = 'oracle'
+# DATABASE_NAME = 'XE'
+# DATABASE_USER = 'hr'
+# DATABASE_PASSWORD = 'hr'
+# DATABASE_HOST = 'localhost'
+# DATABASE_PORT = '1521'
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.oracle',
+#         'NAME': '',
+#         'USER':'',
+#         'PASSWORD':'',
+#         'HOST':'',
+#         'PORT':'',
+#     }
+# }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
@@ -104,9 +123,10 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-Hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'UTC+8'
 
 USE_I18N = True
 
