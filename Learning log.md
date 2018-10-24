@@ -60,7 +60,7 @@ def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
     output = ', '.join([q.question_text for q in latest_question_list])
     return HttpResponse(output)
- # Leave the rest of the views (detail, results, vote) unchanged
+ <!-- Leave the rest of the views (detail, results, vote) unchanged -->
 
 Question.objects.order_by('-pub_date')[:5]中的[:5]用途为返回order by之后的前5个纪录。
 output变量为list，每个变量用逗号隔开，拼接问题list中的值。
