@@ -81,17 +81,29 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
-
+#20181024
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django212',
-        'USER': 'root',
-        'PASSWORD': '00654bao',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.oracle',
+        'NAME': 'orcl12c',
+        'USER': 'EDM12C',
+        'PASSWORD': 'EDM12C',
+        'HOST': '10.62.24.24',
+        'PORT': '1521',
     }
 }
+
+#20181020
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'django212',
+#         'USER': 'root',
+#         'PASSWORD': '00654bao',
+#         'HOST': 'localhost',
+#         'PORT': '3306',
+#     }
+# }
 
 #model of Oracle
 # DATABASE_ENGINE = 'oracle'

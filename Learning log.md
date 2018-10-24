@@ -35,11 +35,21 @@ Traceback (most recent call last):
 TypeError: 'question_text' is an invalid keyword argument for this function
 
 此时检查polls/models.py文件，发现原书写内容为：
-class Question(models.Model):
+>>> class Question(models.Model):
     question_test = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published')
     def __str__(self):
         return self.question_test
+
 可见Question类只有question_test这个变量，没有question_text变量。
 所以，在python3 manage.py shell里，输入q = Question(question_text="What's new?", pub_date=timezone.now())会报错，但是用q.question_text="XXXXXX"方式能够正确执行但是无法再数据库内被写入的原因是，shell中执行的q.question_text被python认为是一次变量新增，但是这个变量并没有被migrate到mysql 里面，所以数据库并不会记录这个新增的变量变化情况。
 切记要仔细！
+### 20181024
+今天尝试改为oracle驱动，试试看！
+成功，没有出现任何问题。
+结合朋友碰到的问题，汇总一下
+1.django版本与python版本要配合。
+    django2.1 python3.6
+2.django版本与oracle版本要配合。
+    django2.1 oracle12c+
+3.如要使用oracle11g，需要降低django版本到1.11
